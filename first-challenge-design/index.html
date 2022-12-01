@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <title>Klab Design</title>
 </head>
 
@@ -64,13 +65,38 @@
                 <div class="left__footer">
                     <div class="left_footer-text">
                         Let's see what we have new, check it out! So
-                         maybe write here something more.
+                        maybe write here something more.
                     </div>
                     <div class="left_footer-bars">
                         <span class="left_footer-bar"></span>
                         <span class="left_footer-bar"></span>
                         <span class="left_footer-bar"></span>
                     </div>
+                </div>
+            </section>
+
+            <section class="right">
+                <div class="right__header">
+                    <h1 class="right__header-title">Create Your account</h1>
+                    <p class="right__header-subtitle">It's free and easy</p>
+                </div>
+                <div class="signup">
+                    <form class="signup__form" action="">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" placeholder="Enter your name" />
+                        <label>Email or Phone number</label>
+                        <input type="text" placeholder="Enter your email or phone number" />
+                        <label>Password</label>
+                        <input type="text" placeholder="Enter your password" />
+                        <div class="signup__form-helptext">Must be 8 characters at least.</div>
+                        <label class="signup__form-checklabel" for="check">
+                            <input type="checkbox" id="check" />
+                            <p>By creating an account you agree to the <strong>Terms and conditions,</strong>
+                                and our <strong>Privacy Policy</strong></p>
+                        </label>
+                        <button class="signup__form-button">Register</button>
+                    </form>
+                    <div class="signup__helptext">or do it via other accounts</div>
                 </div>
             </section>
         </div>
