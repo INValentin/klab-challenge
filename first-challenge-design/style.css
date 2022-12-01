@@ -249,3 +249,23 @@ button.danger {
 .left_footer-bar:first-of-type {
     background-color: var(--royal-blue);
 }
+.right, .signup {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.right__header {
+  display: flex;
+  flex-direction: column;
+}
+.right__header-title {
+  font-size: 15rem;
+  font-weight: bold;
+}
+
+.signup__form {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
