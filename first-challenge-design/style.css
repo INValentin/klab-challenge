@@ -28,6 +28,7 @@ body {
     --buttercup: #f0b71c;
     --tea: #c1bbb0;
     --radius: 1.50rem;
+    --text-accent: rgb(99, 99, 122);
     color: #333;
     font-family: 'Roboto', sans-serif;
 }
@@ -77,18 +78,11 @@ main::after {
     position: relative;
 }
 
-.container .left .logo {
-    margin-bottom: 1rem;
-}
-
-.analytics__circle {
+.left__circle {
     position: absolute;
-    /* z-index: -1; */
     width: 350px;
     height: 350px;
     border-radius: 50%;
-    align-self: center;
-    justify-self: center;
     background-color: var(--royal-blue);
 
     top: 50%;
@@ -96,40 +90,18 @@ main::after {
     transform: translate(-50%, -50%);
 }
 
-.analytics__drop-shadow {
-    position: absolute;
-    /* z-index: -1; */
-    width: 430px;
-    height: 300px;
-    border-radius: var(--radius);
-    align-self: center;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    justify-self: center;
-    backdrop-filter: blur(.5px);
-    background-color: rgba(255, 255, 255, 0.375);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
 .analytics__stats {
     display: flex;
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
-    position: absolute;
-    width: 400px;
-    height: 270px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
     border-radius: var(--radius);
-    align-self: center;
-    /* box-shadow: ; */
-    top: 50%;
-    /* border: 2px solid black; */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    justify-self: center;
+    max-width: 400px;
     background-color: rgba(255, 255, 255);
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0.392);
 }
 
 .analytics__charts {
@@ -178,12 +150,19 @@ main::after {
     padding: .5rem;
 }
 
-.total_text-caption {
-    font-size: .8rem;
+.total__text {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
-.total_text-count {
-    font-size: 1.35rem;
+.total__text-caption {
+    font-size: .8rem;
+    color: var(--purple);
+}
+
+.total__text-count {
+    font-size: 1.14rem;
     font-weight: bold;
 }
 
@@ -232,9 +211,10 @@ button.danger {
     display: flex;
     flex-direction: column;
     width: 300px;
+    font-size: 13px;
     align-self: center;
-    font-weight: 700;
-    color: rgb(84, 84, 119);
+    font-weight: 500;
+    color: var(--text-accent);
     gap: 1rem;
     margin-bottom: 1rem;
 }
@@ -268,6 +248,7 @@ button.danger {
     justify-self: center;
     max-width: 400px;
 }
+
 .signup {
     display: flex;
     align-items: center;
@@ -313,11 +294,12 @@ button.danger {
 .signup__form label {
     font-weight: 500;
     font-size: .9rem;
-    color: rgb(84, 84, 119);
+    color: var(--text-accent);
 }
 
-.signup__form-helptext, .signup__helptext {
-    color: rgb(84, 84, 119);
+.signup__form-helptext,
+.signup__helptext {
+    color: var(--text-accent);
     font-size: small;
 }
 
@@ -325,11 +307,11 @@ button.danger {
     margin: .5rem 0;
     display: grid;
     grid-template-columns: auto 1fr;
-    align-items: flex-start; 
+    align-items: flex-start;
     gap: 1rem;
 }
 
-.signup__form-checklabel input{
+.signup__form-checklabel input {
     position: relative;
     height: 1.2rem;
     width: 1.2rem;
