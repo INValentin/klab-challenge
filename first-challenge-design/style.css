@@ -22,6 +22,7 @@ body {
     --pink: #f895b0;
     --pink-opacity: #f895b04a;
     --heather: #c6cedb;
+    --heather-opacity: #c6cedb4a;
     --green: #6cc59c;
     --green-opacity: #6cc59c4a;
     --buttercup: #f0b71c;
@@ -65,6 +66,7 @@ main::after {
     padding: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    position: relative;
 }
 
 
@@ -82,7 +84,7 @@ main::after {
 .analytics__circle {
     position: absolute;
     /* z-index: -1; */
-    width:350px;
+    width: 350px;
     height: 350px;
     border-radius: 50%;
     align-self: center;
@@ -110,6 +112,7 @@ main::after {
     background-color: rgba(255, 255, 255, 0.375);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
 .analytics__stats {
     display: flex;
     flex-direction: column;
@@ -128,10 +131,11 @@ main::after {
     justify-self: center;
     background-color: rgba(255, 255, 255);
 }
+
 .analytics__charts {
     flex: 1;
     display: grid;
-    grid-template-columns: 1fr  1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 
@@ -177,6 +181,7 @@ main::after {
 .total_text-caption {
     font-size: .8rem;
 }
+
 .total_text-count {
     font-size: 1.35rem;
     font-weight: bold;
@@ -205,17 +210,19 @@ main::after {
     padding: .5rem .75rem;
     border-radius: .75rem;
     font-weight: bold;
-    font-size: .8rem!important;
+    font-size: .8rem !important;
 }
 
 button.success {
     color: var(--green);
     background-color: var(--green-opacity);
 }
+
 button.primary {
     color: var(--royal-blue);
     background-color: var(--royal-blue-opacity);
 }
+
 button.danger {
     color: var(--pink);
     background-color: var(--pink-opacity);
@@ -249,23 +256,135 @@ button.danger {
 .left_footer-bar:first-of-type {
     background-color: var(--royal-blue);
 }
-.right, .signup {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
+
+.right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--heather-opacity);
+    padding: 1rem;
+    border-radius: 1rem;
+    align-self: center;
+    justify-self: center;
+    max-width: 400px;
 }
+.signup {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .right__header {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .35rem;
 }
+
 .right__header-title {
-  font-size: 15rem;
-  font-weight: bold;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.right__header-subtitle {
+    font-weight: 300;
+    font-size: small;
 }
 
 .signup__form {
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    max-width: 300px;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.signup__form input {
+    padding: .75rem;
+    border-radius: .25rem;
+    border: 0;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    outline: none;
+}
+
+.signup__form label {
+    font-weight: 500;
+    font-size: .9rem;
+    color: rgb(84, 84, 119);
+}
+
+.signup__form-helptext, .signup__helptext {
+    color: rgb(84, 84, 119);
+    font-size: small;
+}
+
+.signup__form-checklabel {
+    margin: .5rem 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: flex-start; 
+    gap: 1rem;
+}
+
+.signup__form-checklabel input{
+    position: relative;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-color: var(--heather);
+    cursor: pointer;
+}
+
+.signup__form-checklabel p {
+    font-weight: 400;
+    font-size: .8rem;
+}
+
+.signup__form-button {
+    border: 0;
+    background-color: var(--royal-blue);
+    color: white;
+    padding: .5rem .75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.signup__options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.signup__options-option {
+    padding: .5rem;
+    border-radius: .5rem;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+.signup__options-option img {
+    height: 2rem;
+    width: 2.1rem;
+}
+
+.container__cornerimg {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 50px;
+    width: 52px;
+    left: auto;
+    top: auto;
 }
